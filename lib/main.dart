@@ -18,8 +18,9 @@ class CatHatMusic extends StatelessWidget {
       title: '猫猫头音乐',
       theme: ThemeData(
         primarySwatch: primary,
+        tabBarTheme: tabBarTheme
       ),
-      initialRoute: '/login',
+      initialRoute: '/',
       routes: {
         '/': (context) => const Home(),
         '/login': (context) => const Login()

@@ -17,3 +17,7 @@ const MaterialColor primary = MaterialColor(
     900: Color(0xFF00189A),
   },
 );
+const TabBarTheme tabBarTheme = TabBarTheme(
+  labelColor: primary,
+  unselectedLabelColor: Color(0xFF7A869A),
+);
