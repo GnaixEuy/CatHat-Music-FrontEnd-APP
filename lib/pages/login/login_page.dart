@@ -2,14 +2,14 @@ import 'package:cathat_music_app/theme.dart';
 import 'package:cathat_music_app/widget/login_form.dart';
 import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
-  State createState() => _LoginState();
+  State createState() => _LoginPageState();
 }
 
-class _LoginState extends State<Login> with TickerProviderStateMixin {
+class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
   late TabController _tabController;
 
   @override

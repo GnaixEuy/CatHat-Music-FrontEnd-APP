@@ -1,14 +1,17 @@
+import 'package:cathat_music_app/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
-import '../theme.dart';
+class NotificationArea extends StatelessWidget {
+  const NotificationArea({
+    Key? key,
+    required this.screenSize,
+  }) : super(key: key);
 
-class Header extends StatelessWidget {
-  const Header({Key? key}) : super(key: key);
-
+  final Size screenSize;
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
     return Stack(
       children: <Widget>[
         Container(
@@ -18,7 +21,7 @@ class Header extends StatelessWidget {
             decoration: const BoxDecoration(
                 color: primary,
                 borderRadius:
-                BorderRadius.only(bottomRight: Radius.circular(100))),
+                    BorderRadius.only(bottomRight: Radius.circular(100))),
             child: Container(
                 padding: const EdgeInsets.only(
                     top: 19, bottom: 19, right: 25, left: 25),
@@ -39,35 +42,40 @@ class Header extends StatelessWidget {
                                 fontSize: 16,
                               ),
                             ),
-                            SizedBox(height: 5,),
-                            Text("猫猫头", style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500
-                            ),)
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            const Text(
+                              "猫猫头",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500),
+                            )
                           ],
                         ),
                         const Spacer(),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            Icon(
-                              Icons.doorbell_sharp,
-                              color: Colors.white,
-                              size: 20.0,
+                            IconButton(
+                                onPressed: () {},
+                                icon:
+                                    SvgPicture.asset('assets/icons/bell.svg')),
+                            const SizedBox(
+                              width: 18,
                             ),
-                            const SizedBox(width: 18,),
                             Container(
                               width: 38,
                               height: 38,
                               decoration: BoxDecoration(
                                   color: Colors.white,
-                                  borderRadius: BorderRadius.circular(19)
-                              ),
-                              child: Image(
+                                  borderRadius: BorderRadius.circular(19)),
+                              child: const Image(
                                   width: 38,
                                   height: 38,
-                                  image: const AssetImage('lib/assets/images/avatar.png')),
+                                  image:
+                                      AssetImage('assets/images/avatar.png')),
                             )
                           ],
                         )
@@ -79,7 +87,7 @@ class Header extends StatelessWidget {
             child: Image(
                 width: screenSize.width,
                 height: 240,
-                image: const AssetImage('lib/assets/images/bg.png')))
+                image: const AssetImage('assets/images/bg.png')))
       ],
     );
   }
