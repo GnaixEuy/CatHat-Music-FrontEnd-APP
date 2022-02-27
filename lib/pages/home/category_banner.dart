@@ -13,20 +13,29 @@ class CategoryBanner extends StatelessWidget {
       child: Row(
         children: <Widget>[
           CategoryBannerCard(
-              title: '嘻哈',
-              description: '1.4万播放量',
-              image: 'assets/images/banner.png',
-              onPress: () {}),
+            title: '嘻哈',
+            description: '1.4万播放量',
+            image: 'assets/images/banner.png',
+            onPress: () {
+              Navigator.pushNamed(context, '/playlist/detail');
+            },
+          ),
           CategoryBannerCard(
-              title: '民谣',
-              description: '1.4万播放量',
-              image: 'assets/images/banner.png',
-              onPress: () {}),
+            title: '民谣',
+            description: '1.4万播放量',
+            image: 'assets/images/banner.png',
+            onPress: () {
+              Navigator.pushNamed(context, '/playlist/detail');
+            },
+          ),
           CategoryBannerCard(
-              title: '嘻哈',
-              description: '1.4万播放量',
-              image: 'assets/images/banner.png',
-              onPress: () {}),
+            title: '嘻哈',
+            description: '1.4万播放量',
+            image: 'assets/images/banner.png',
+            onPress: () {
+              Navigator.pushNamed(context, '/playlist/detail');
+            },
+          ),
         ],
       ),
     );
